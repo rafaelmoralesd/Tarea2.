@@ -1,0 +1,48 @@
+void main() {
+  
+final List<Map<String, dynamic>> data = [{
+ 
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    
+         }];
+    
+
+  
+  
+
+  final List<Producto>resultado = [data];
+  print(data);
+
+}
+
+
+
+class Producto{
+  
+   final String id;
+     final String  title;
+    final String price;
+    final String description ;
+  final String   category;
+  final String  image;
+    
+  
+  Producto(this.id, this.title,this.price, this.description, this.category,this.image);
+ 
+   
+ factory Producto.fromJson(Map map){
+    return Producto(
+        id: map['id'],
+      title: map[ 'title'], 
+      price : map[ 'price'],
+      description : map[ 'description'],
+      category : map[ 'category'], 
+      image : map[ 'image'] );
+  }
+}
+  
